@@ -1,11 +1,15 @@
 <?php
 /*
 Plugin Name: Force Post Category Selection
-Plugin URI: http://appinstore.com
 Description: Forces user to assign a category to a post before publishing 
+Contributors: j_p_s
 Author: Jatinder Pal Singh
-Version: 0.1
-Author URI: http://appinstore.com/
+Author URI: http://www.jpsays.com
+Tags: post, category, publish, without, require, force, must, draft
+Requires at least: 3.x
+Tested up to: 4.1
+Stable tag: 1.0
+Version: 1.0
 */ 
 function force_post_cat_init() 
 {
