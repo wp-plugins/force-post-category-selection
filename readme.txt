@@ -4,9 +4,9 @@ Author: Jatinder Pal Singh
 Author URI: http://www.jpsays.com
 Tags: post, category, publish, without, require, force, must, draft
 Requires at least: 3.x
-Tested up to: 4.1
-Stable tag: 1.0
-Version: 1.0
+Tested up to: 4.x
+Stable tag: 1.1
+Version: 1.1
 
 This is simple plugin which forces the users to select atleast one category from the list while publishing a new post.
 
@@ -37,3 +37,6 @@ screenshot-2.png
 
 = 1.0 =
 * Just developed
+
+= 1.1 =
+* Fixed bug with bbpress

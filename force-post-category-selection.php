@@ -7,9 +7,9 @@ Author: Jatinder Pal Singh
 Author URI: http://www.jpsays.com
 Tags: post, category, publish, without, require, force, must, draft
 Requires at least: 3.x
-Tested up to: 4.1
-Stable tag: 1.0
-Version: 1.0
+Tested up to: 4.x
+Stable tag: 1.1
+Version: 1.1
 */ 
 function force_post_cat_init() 
 {
@@ -24,23 +24,26 @@ function force_post_cat()
    	var cats = jQuery('[id^=\"taxonomy\"]')
       .find('.selectit')
       .find('input');
-    category_selected=false;
-    for (counter=0; counter<cats.length; counter++) 
+	if(cats.length)
 	{
-        if (cats.get(counter).checked==true) 
+		category_selected=false;
+		for (counter=0; counter<cats.length; counter++) 
 		{
-        	category_selected=true;
-	        break;
-    	}
-    }
-    if(category_selected==false) 
-	{
-      alert('You have not selected any category for the post. Kindly select post category.');
-      setTimeout(\"jQuery('#ajax-loading').css('visibility', 'hidden');\", 100);
-      jQuery('[id^=\"taxonomy\"]').find('.tabs-panel').css('background', '#F96');
-      setTimeout(\"jQuery('#publish').removeClass('button-primary-disabled');\", 100);
-      return false;
-    }
+			if (cats.get(counter).checked==true) 
+			{
+				category_selected=true;
+				break;
+			}
+		}
+		if(category_selected==false) 
+		{
+			alert('You have not selected any category for the post. Kindly select post category.');
+			setTimeout(\"jQuery('#ajax-loading').css('visibility', 'hidden');\", 100);
+			jQuery('[id^=\"taxonomy\"]').find('.tabs-panel').css('background', '#F96');
+			setTimeout(\"jQuery('#publish').removeClass('button-primary-disabled');\", 100);
+			return false;
+		}
+	}
   });
   ";
    echo "</script>\n";
